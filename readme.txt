@@ -11,7 +11,7 @@ Introduces the [list-pages], [sibling-pages] and [child-pages] shortcodes for ea
 
 == Description ==
 
-Introduces the [list-pages], [sibling-pages] and [child-pages] [shortcodes](http://codex.wordpress.org/Shortcode_API) for easily displaying a list of pages within a post or page.  Both shortcodes accept all parameters that you can pass to the [`wp_list_pages()`](http://codex.wordpress.org/Template_Tags/wp_list_pages) function with the addition of a class parameter.
+Introduces the [list-pages], [sibling-pages] and [child-pages] [shortcodes](http://codex.wordpress.org/Shortcode_API) for easily displaying a list of pages within a post or page.  Both shortcodes accept all parameters that you can pass to the [`wp_list_pages()`](http://codex.wordpress.org/Template_Tags/wp_list_pages) function with the addition of a class parameter.  Added dropdown functionality.
 
 = Example Usage =
 
