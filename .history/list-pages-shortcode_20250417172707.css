@@ -1,0 +1,126 @@
+.dropdown-menu {
+    display: none;
+    margin-left: 20px;
+}
+
+/* Default state for the button */
+.dropdown-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px; /* Match the font size of the links */
+    margin-left: 5px;
+    transition: transform 0.3s ease; /* Smooth rotation */
+    padding: 0;
+    line-height: 1; /* Compact the button */
+    position: relative; /* Add positioning context */
+    z-index: 1; /* Ensure button doesn't block clicks */
+}
+
+/* Rotated state for the button */
+.dropdown-toggle.rotated {
+    transform: rotate(45deg); /* Rotate 45 degrees */
+}
+
+/* General styles for the list */
+.list-pages-shortcode ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 180px; /* Ensure it fits within the sidebar */
+    word-wrap: break-word; /* Prevent long text from overflowing */
+}
+
+.list-pages-shortcode li {
+    margin: 0;
+    padding: 5px 0; /* Reduce padding for compactness */
+    position: relative;
+}
+
+/* Link styles */
+.list-pages-shortcode a {
+    text-decoration: none;
+    color: #0073aa;
+    font-weight: bold;
+    font-size: 14px; /* Adjust font size for compactness */
+    display: inline-block;
+    max-width: 160px; /* Prevent links from overflowing */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis for long text */
+    white-space: nowrap; /* Prevent wrapping */
+    position: relative; /* Add positioning context */
+    z-index: 2; /* Ensure links are above buttons */
+}
+
+.list-pages-shortcode a:hover {
+    color: #005177;
+    text-decoration: underline;
+}
+
+/* Dropdown menu */
+.children.dropdown-menu {
+    display: none;
+    margin-left: 15px; /* Indent child items slightly */
+    padding-left: 10px;
+    border-left: 2px solid #ddd;
+    max-width: 160px; /* Ensure child menus fit within the sidebar */
+    position: relative; /* Add positioning context */
+    z-index: 3; /* Ensure dropdown is above buttons and links */
+}
+
+/* Visible dropdown menu */
+.children.dropdown-menu.visible {
+    display: block;
+}
+
+/* Ensure nested dropdowns are properly indented */
+.children .children {
+    margin-left: 15px; /* Indent further for nested levels */
+    padding-left: 10px;
+    border-left: 2px solid #ccc; /* Slightly lighter border for deeper levels */
+}
+
+/* Make sure child items are fully clickable */
+.children.dropdown-menu li a {
+    display: block;
+    position: relative;
+    z-index: 4; /* Higher z-index for nested links */
+    pointer-events: auto; /* Ensure clicks are captured */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .list-pages-shortcode ul {
+        max-width: 100%; /* Allow full width on smaller screens */
+    }
+
+    .list-pages-shortcode a {
+        max-width: 100%; /* Prevent truncation on smaller screens */
+    }
+
+    .children.dropdown-menu {
+        max-width: 100%; /* Allow dropdowns to expand fully */
+    }
+}
+
+.children {
+    display: none; /* Hide nested lists by default */
+}
+
+.page_item_has_children.open > .children {
+    display: block; /* Show nested lists when parent is open */
+}
+
+.page_item_has_children > a {
+    cursor: pointer;
+}
+
+/* Fix for clickable links in dropdown */
+.page_item_has_children {
+    position: relative;
+}
+
+/* Ensure dropdown items don't have their click events blocked */
+.children.dropdown-menu li {
+    pointer-events: auto;
+}

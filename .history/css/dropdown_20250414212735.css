@@ -1,0 +1,30 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.page_item_has_children > a::after {
+    content: '+';
+    margin-left: 5px;
+    display: inline-block;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.page_item_has_children.active > a::after {
+    transform: rotate(45deg);
+}
+
+.dropdown-content {
+    display: none;
+    margin-left: 20px;
+}
+
+.dropdown.active > .dropdown-content {
+    display: block;
+}
+
+.dropdown-toggle::after {
+    content: " ▼";
+    font-size: 0.8em;
+}

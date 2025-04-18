@@ -1,0 +1,16 @@
+.page_item_has_children {
+    position: relative;
+}
+
+.dropdown-toggle-icon {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.children {
+    display: none;
+}
+
+.children.visible {
+    display: block;
+}

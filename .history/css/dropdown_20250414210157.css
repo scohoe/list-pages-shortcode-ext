@@ -1,0 +1,30 @@
+.page_item {
+    position: relative;
+    display: block;
+}
+
+.page_item_has_children > a::after {
+    content: '+';
+    margin-left: 5px;
+    display: inline-block;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.page_item_has_children.active > a::after {
+    transform: rotate(45deg);
+}
+
+.children {
+    display: none;
+    margin-left: 20px;
+}
+
+.page_item_has_children.active > .children {
+    display: block;
+}
+
+.page_item_has_children > a::after {
+    content: " ▼";
+    font-size: 0.8em;
+}

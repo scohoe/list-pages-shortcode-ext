@@ -1,0 +1,42 @@
+.page_item_has_children {
+    position: relative;
+}
+
+.page_item_has_children > a::after {
+    content: '+';
+    margin-left: 5px;
+    display: inline-block;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.page_item_has_children.active > a::after {
+    transform: rotate(45deg);
+}
+
+.dropdown-content {
+    display: none;
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+.page_item_has_children.active > .dropdown-content {
+    display: block;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-toggle::after {
+    content: " ▼";
+    font-size: 0.8em;
+    vertical-align: middle;
+}
+
+/* Accessibility focus styles */
+.dropdown-toggle:focus,
+[role="menuitem"]:focus {
+    outline: 2px solid #0078d7;
+    outline-offset: 2px;
+}
